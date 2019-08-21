@@ -1,0 +1,2 @@
+USAGE
+python mainfile.py --image images/car.jpg
