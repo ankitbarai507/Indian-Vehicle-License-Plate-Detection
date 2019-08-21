@@ -1,9 +1,4 @@
-*.jpg
-*.jpeg
-*.png
 *.pb
 *.pbtxt
-yolo-coco/*
 *.weights
 *.names
-*.cfg
