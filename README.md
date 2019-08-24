@@ -1,7 +1,7 @@
 # Indian-Vehicle-License-Plate-Detection
 Challenge done as part of TCS HumAIn challenge
 
-# for Windows users
+# For Windows users
 Download tesseract OCR for windows from [here](https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5.0.0.20190526.exe)
 It makes use of python-Tesseract OCR. <br />
 For that change the path of Tesseract OCR in files license_detection.py and yolo_license_detection.py to where it installed on your system.
@@ -18,8 +18,10 @@ python mainfile.py --image images/car.jpg
 To detect license plate  for each vehicle in a **image having multiple cars** use multiple_cars.py <br />
 python multiple_cars.py   <br />   **put relative image path as images/car.png for testing purpose**
 
+**Output images are inside images/ **
 # For linux users
 **The files mainfile.py and multiple_cars.py will not directly work in Linux as tesseract OCR dependency is not tested with linux** 
+**OCR not tested in linux but license detection model works same**
 <br/>
 python without_ocr.py --image images/car.jpg <br/>
 
