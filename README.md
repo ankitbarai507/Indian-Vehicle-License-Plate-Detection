@@ -18,7 +18,7 @@ python mainfile.py --image images/car.jpg
 To detect license plate  for each vehicle in a **image having multiple cars** use multiple_cars.py <br />
 python multiple_cars.py   <br />   **put relative image path as images/car.png for testing purpose**
 
-**Output images are inside images/ **
+**Output images are inside output/images **
 # For linux users
 **The files mainfile.py and multiple_cars.py will not directly work in Linux as tesseract OCR dependency is not tested with linux** 
 **OCR not tested in linux but license detection model works same**
