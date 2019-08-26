@@ -1,6 +1,9 @@
 # Indian-Vehicle-License-Plate-Detection
 Challenge done as part of TCS HumAIn challenge
 
+Use python getdataset.py to download the dataset and generate annotation files for training. <br/>
+Training is done using [Darknet](https://github.com/AlexeyAB/darknet?files=1#how-to-train-tiny-yolo-to-detect-your-custom-objects) framework
+<br/>
 # For Windows users
 Download tesseract OCR for windows from [here](https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5.0.0.20190526.exe)
 It makes use of python-Tesseract OCR. <br />
