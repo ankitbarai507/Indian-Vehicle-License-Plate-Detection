@@ -6,6 +6,7 @@ Take a ConvNet pretrained on Yolo, remove the last fully-connected layer , then 
 Use python getdataset.py to download the dataset and generate annotation files for training. <br/>
 **Training** is done using [Darknet](https://github.com/AlexeyAB/darknet?files=1#how-to-train-tiny-yolo-to-detect-your-custom-objects) framework
 <br/>
+![alt](output/op.png)
 **Below given descriptions don't train model but uses the trained model weights for testing purposes**
 # For Windows users
 Download tesseract OCR for windows from [here](https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5.0.0.20190526.exe)
