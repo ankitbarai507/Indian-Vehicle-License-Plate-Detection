@@ -1,5 +1,8 @@
 # Indian-Vehicle-License-Plate-Detection
 
+This is a **Classification+Localization problem** <br/>
+**Basic approach of transfer learning** <br/>
+Take a ConvNet pretrained on Yolo, remove the last fully-connected layer , then treat the rest of the ConvNet as a fixed feature extractor for the new dataset.then, train a linear classifier (e.g. Linear SVM or Softmax classifier) for the new dataset.
 Use python getdataset.py to download the dataset and generate annotation files for training. <br/>
 **Training** is done using [Darknet](https://github.com/AlexeyAB/darknet?files=1#how-to-train-tiny-yolo-to-detect-your-custom-objects) framework
 <br/>
