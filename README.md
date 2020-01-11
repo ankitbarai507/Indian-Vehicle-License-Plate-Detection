@@ -1,7 +1,7 @@
 # Indian-Vehicle-License-Plate-Detection
 
 Use python getdataset.py to download the dataset and generate annotation files for training. <br/>
-Training is done using [Darknet](https://github.com/AlexeyAB/darknet?files=1#how-to-train-tiny-yolo-to-detect-your-custom-objects) framework
+**Training** is done using [Darknet](https://github.com/AlexeyAB/darknet?files=1#how-to-train-tiny-yolo-to-detect-your-custom-objects) framework
 <br/>
 **Below given descriptions don't train model but uses the trained model weights for testing purposes**
 # For Windows users
