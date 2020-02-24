@@ -1,6 +1,5 @@
 # Indian-Vehicle-License-Plate-Detection
 
-This is a **Classification+Localization problem** <br/>
 **Basic approach** <br/>
 Take a ConvNet pretrained on Yolo, remove the last fully-connected layer , then treat the rest of the ConvNet as a fixed feature extractor for the new dataset.then, train a linear classifier (e.g. Linear SVM or Softmax classifier) for the new dataset.
 Use python getdataset.py to download the dataset and generate annotation files for training. <br/>
@@ -41,10 +40,10 @@ Find the box confidence (pc) (Probability of the box containing the object) for 
 Pick the bounding box with the maximum box confidence. Output this box as prediction.
 Discard any remaining bounding boxes which have an IoU greater than 0.5 with the bounding box selected as output in the previous step i.e. any bounding box with high overlap is discarded.
 In case there are multiple classes/ objects, i.e., if there are four objects/classes, then non-max suppression will run four times, once for every output class. <br/>
-**References**<br/>
-[DarkNet (YOLOv2)] (https://pjreddie.com/darknet/yolov2/)
-[You Only Look Once: Unified, Real-Time Object Detection – Joseph Redmon, Santosh Divvala, Ross Girshick, Ali Farhadi](arXiv:1612.08242)
-[YAD2K: Yet Another Darknet 2 Keras – Allan Zelener :]( https://github.com/allanzelener/YAD2K)
+# References
+[DarkNet (YOLOv2](https://pjreddie.com/darknet/yolov2/) <br/>
+[You Only Look Once: Unified, Real-Time Object Detection – Joseph Redmon, Santosh Divvala, Ross Girshick, Ali Farhadi](arXiv:1612.08242) <br/>
+[YAD2K: Yet Another Darknet 2 Keras – Allan Zelener :]( https://github.com/allanzelener/YAD2K) <br/>
 [Berkley Deep Driving Dataset] : (http://bdd-data.berkeley.edu/) <br/>
 **Below given descriptions don't train model but uses the trained model weights for testing purposes**
 # For Windows users
