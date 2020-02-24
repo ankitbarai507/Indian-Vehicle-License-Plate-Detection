@@ -21,7 +21,7 @@ Intersection over Union is the ratio of the area of intersection over the union 
 
 Intersection over Union is the ratio of the area of intersection over the union area occupied by the ground truth bounding box and the predicted bounding box.
 <br/>
-![alt](images/9.PNG) <br/>
+![alt](images/9.png) <br/>
 # Tackling Multiple Detection
 **Threshold Filtering**<br/>
 he YOLO object detection algorithm will predict multiple overlapping bounding boxes for a given image. As not all bounding boxes contain the object to be classified (e.g. pedestrian, bike, car or truck) or detected, we need to filter out those bounding boxes that don’t contain the target object. To implement this, we monitor the value of pc, i.e., the probability or confidence of an object (i.e. the four classes) being present in the bounding box. If the value of pc is less than the threshold value, then we filter out that bounding box from the predicted bounding boxes. This threshold may vary from model to model and serve as a hyper-parameter for the model.
