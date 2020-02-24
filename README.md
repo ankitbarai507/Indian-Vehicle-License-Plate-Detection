@@ -42,9 +42,9 @@ Discard any remaining bounding boxes which have an IoU greater than 0.5 with the
 In case there are multiple classes/ objects, i.e., if there are four objects/classes, then non-max suppression will run four times, once for every output class. <br/>
 # References
 [DarkNet (YOLOv2](https://pjreddie.com/darknet/yolov2/) <br/>
-[You Only Look Once: Unified, Real-Time Object Detection – Joseph Redmon, Santosh Divvala, Ross Girshick, Ali Farhadi](arXiv:1612.08242) <br/>
-[YAD2K: Yet Another Darknet 2 Keras – Allan Zelener :]( https://github.com/allanzelener/YAD2K) <br/>
-[Berkley Deep Driving Dataset] : (http://bdd-data.berkeley.edu/) <br/>
+[You Only Look Once: Unified, Real-Time Object Detection – Joseph Redmon, Santosh Divvala, Ross Girshick, Ali Farhadi](https://arXiv:1612.08242) <br/>
+[YAD2K: Yet Another Darknet 2 Keras – Allan Zelener]( https://github.com/allanzelener/YAD2K) <br/>
+[Berkley Deep Driving Dataset](http://bdd-data.berkeley.edu/) <br/>
 **Below given descriptions don't train model but uses the trained model weights for testing purposes**
 # For Windows users
 Download tesseract OCR for windows from [here](https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5.0.0.20190526.exe)
