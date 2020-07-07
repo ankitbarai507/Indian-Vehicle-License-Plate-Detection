@@ -7,7 +7,7 @@ Use python getdataset.py to download the dataset and generate annotation files f
 The dataset available to us is very minimal appx. 400 images only so, it is best to leverage Transfer learning for good results.
 Instead of building the model from scratch, we will be using a pre-trained network and applying transfer learning to create our final model. You only look once (YOLO) is a state-of-the-art, real-time object detection system, which has a mAP on VOC 2007 of 78.6% and a mAP of 48.1% on the COCO test-dev. YOLO applies a single neural network to the full image. This network divides the image into regions and predicts the bounding boxes and probabilities for each region. These bounding boxes are weighted by the predicted probabilities.
 
-
+[![](output/op.PNG)](output/op.PNG)<br/>
 **Below given descriptions don't train model but uses the trained model weights for testing purposes**
 # For Windows users
 Download tesseract OCR for windows from [here](https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5.0.0.20190526.exe)
@@ -49,7 +49,6 @@ One of the advantages of YOLO is that it looks at the whole image during the tes
 **Training the model** <br/>
 Training is done using [Darknet](https://github.com/AlexeyAB/darknet?files=1#how-to-train-tiny-yolo-to-detect-your-custom-objects) framework.
 <br/>
-![alt](output/op.PNG) <br/>
 **Intersection Over Union** <br/>
 Intersection over Union (IoU) is an evaluation metric that is used to measure the accuracy of an object detection algorithm. Generally, IoU is a measure of the overlap between two bounding boxes. To calculate this metric, we need:
 
