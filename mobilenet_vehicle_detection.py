@@ -25,12 +25,12 @@ def vehicle(img):
         img, size=(300, 300), swapRB=True, crop=False))
     networkOutput = tensorflowNet.forward()
     count = 0
-    print('hi1')
+    # print('hi1')
     for detection in networkOutput[0, 0]:
 
         score = float(detection[2])
         if score > 0.4:
-            print('hi')
+            # print('hi')
             print(classes_90[int(detection[1])])
             left = detection[3] * cols
             top = detection[4] * rows

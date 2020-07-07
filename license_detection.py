@@ -31,7 +31,7 @@ def remove_noise_and_smooth(img):
 
 
 def license(img):
-    print('licsense called')
+    print('licsense detection called')
     net = cv2.dnn.readNetFromDarknet("yolo-coco/yolov3-tiny.cfg", "yolo-coco/yolov3-tiny_last.weights")
     
     image = np.array(img)
