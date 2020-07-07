@@ -23,10 +23,15 @@ pip install pytesseract
 ```
 
 To detect license plate having a single car use mainfile.py <br />
+```
 python mainfile.py --image images/car.jpg
-
+```
 To detect license plate  for each vehicle in a **image having multiple cars** use multiple_cars.py <br />
-python multiple_cars.py   <br />   **put relative image path as images/car.png for testing purpose**
+```
+python multiple_cars.py
+```
+**press 'q' to get close output window after running above commands**
+**put relative image path as images/car.png for testing purpose**
 <br/>
 **Output images are inside output/image**
 # For linux users
@@ -34,10 +39,11 @@ python multiple_cars.py   <br />   **put relative image path as images/car.png f
 <br/>
 **OCR not tested in linux but license detection model works same**
 <br/>
+```
 python without_ocr.py --image images/car.jpg <br/>
 
 python without_ocr_multiple_cars.py  <br />  **put relative image path as images/car.png for testing purpose**
-
+```
 
 One of the advantages of YOLO is that it looks at the whole image during the test time, so its predictions are informed by global context in the image. Unlike R-CNN, which requires thousands of networks for a single image, YOLO makes predictions with a single network. This makes this algorithm extremely fast, over 1000x faster than R-CNN and 100x faster than Fast R-CNN. <br/>
 **Training the model** <br/>
