@@ -28,7 +28,7 @@ python mainfile.py --image images/car.jpg
 ```
 To detect license plate  for each vehicle in a **image having multiple cars** use multiple_cars.py <br />
 ```
-python multiple_cars.py
+python multiple_cars.py images/mult_cars.png
 ```
 **press 'q' to get close output window after running above commands**
 **put relative image path as images/car.png for testing purpose**
