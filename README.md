@@ -50,6 +50,17 @@ One of the advantages of YOLO is that it looks at the whole image during the tes
 Training is done using [Darknet](https://github.com/AlexeyAB/darknet?files=1#how-to-train-tiny-yolo-to-detect-your-custom-objects) framework.
 <br/>
 
+# License plate detection in Live video streams
+[Wpod-net](http://openaccess.thecvf.com/content_ECCV_2018/html/Sergio_Silva_License_Plate_Detection_ECCV_2018_paper.html) is used for detecting License plate. It is novel Convolutional Neural Network (CNN) capable of detecting and rectifying multiple distorted license plates in a single image, which are fed to an Optical Character Recognition (OCR) method to obtain the final result.
+- First License plates is detected
+- Then each license plate undergoes pre-processing followed by character seperation using Image processing i.e. Each char of license plate is seperated. Also, in case if License plate is in two lines(Aspect ratio in certain range), it is cut horizontally in between and concatnated from sides to get all characters in single line.
+- Each cropped character is passed through character recogntion model to determine the character.
+- Progrmmatic correction to detected text is also Done to remove mistakes made by character recognizer.
+- Color of vehicle is determined.
+- Type of vehicle is determined (Bus/Car/Truck)
+<b>Sample results</b>
+![](results.PNG)
+
 # References
 [DarkNet (YOLOv2](https://pjreddie.com/darknet/yolov2/) <br/>
 [You Only Look Once: Unified, Real-Time Object Detection – Joseph Redmon, Santosh Divvala, Ross Girshick, Ali Farhadi](https://arXiv:1612.08242) <br/>
