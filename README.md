@@ -49,34 +49,7 @@ One of the advantages of YOLO is that it looks at the whole image during the tes
 **Training the model** <br/>
 Training is done using [Darknet](https://github.com/AlexeyAB/darknet?files=1#how-to-train-tiny-yolo-to-detect-your-custom-objects) framework.
 <br/>
-**Intersection Over Union** <br/>
-Intersection over Union (IoU) is an evaluation metric that is used to measure the accuracy of an object detection algorithm. Generally, IoU is a measure of the overlap between two bounding boxes. To calculate this metric, we need:
 
-The ground truth bounding boxes (i.e. the hand labeled bounding boxes)
-The predicted bounding boxes from the model
-Intersection over Union is the ratio of the area of intersection over the union area occupied by the ground truth bounding box and the predicted bounding box. Fig. 9 shows the IoU calculation for different bounding box scenarios.
-
-Intersection over Union is the ratio of the area of intersection over the union area occupied by the ground truth bounding box and the predicted bounding box.
-<br/>
-![alt](images/9.png) <br/>
-# Tackling Multiple Detection
-**Threshold Filtering**<br/>
-he YOLO object detection algorithm will predict multiple overlapping bounding boxes for a given image. As not all bounding boxes contain the object to be classified (e.g. pedestrian, bike, car or truck) or detected, we need to filter out those bounding boxes that don’t contain the target object. To implement this, we monitor the value of pc, i.e., the probability or confidence of an object (i.e. the four classes) being present in the bounding box. If the value of pc is less than the threshold value, then we filter out that bounding box from the predicted bounding boxes. This threshold may vary from model to model and serve as a hyper-parameter for the model.
-
-If predicted target variable is defined as:
-![alt](images/10.PNG) <br/>
-
-then discard all bounding boxes where the value of pc < threshold value. The following code implements this approach.
-<br/>
-**Non-max Suppression**<br/>
-Even after filtering by thresholding over the classes score, we may still end up with a lot of overlapping bounding boxes. This is because the YOLO algorithm may detect an object multiple times, which is one of its drawbacks. A second filter called non-maximal suppression (NMS) is used to remove duplicate detections of an object. Non-max suppression uses ‘Intersection over Union’ (IoU) to fix multiple detections.
-
-Non-maximal suppression is implemented as follows:
-
-Find the box confidence (pc) (Probability of the box containing the object) for each detection.
-Pick the bounding box with the maximum box confidence. Output this box as prediction.
-Discard any remaining bounding boxes which have an IoU greater than 0.5 with the bounding box selected as output in the previous step i.e. any bounding box with high overlap is discarded.
-In case there are multiple classes/ objects, i.e., if there are four objects/classes, then non-max suppression will run four times, once for every output class. <br/>
 # References
 [DarkNet (YOLOv2](https://pjreddie.com/darknet/yolov2/) <br/>
 [You Only Look Once: Unified, Real-Time Object Detection – Joseph Redmon, Santosh Divvala, Ross Girshick, Ali Farhadi](https://arXiv:1612.08242) <br/>
